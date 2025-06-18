@@ -1,4 +1,4 @@
-const test = (nums) =>{
+const majorityElements = (nums) =>{
 
     let map = new Map();
     for (let i=0; i<nums.length; i++){
@@ -8,7 +8,6 @@ const test = (nums) =>{
             map.set(nums[i], 1);
         }
     }
-
     let maxKey = null;
     let maxValue = -Infinity;
     for (let [key, value] of map) {
@@ -18,9 +17,7 @@ const test = (nums) =>{
         }
     }
     return maxKey
-
 }
-
 // Example usage
 const nums = [1, 2, 2, 4, 5, 6, 2, 8, 9];
-console.log(test(nums));
+console.log(majorityElements(nums));
